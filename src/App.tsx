@@ -1,5 +1,7 @@
+import RoutesContainer from "./routes";
+
 const App = () => {
-  return <div>App</div>;
+  return <RoutesContainer />;
 };
 
 export default App;
