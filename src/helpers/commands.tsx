@@ -34,15 +34,15 @@ const CheckCommandAndExecute = (command: string) => {
 
 const HelpCommand = () => {
   return (
-    <div className="flex flex-col gap-2">
-      <p className="text-color3">help</p>
-      <p className="text-color3">about</p>
-      <p className="text-color3">contact</p>
-      <p className="text-color3">projects</p>
-      <p className="text-color3">skills</p>
-      <p className="text-color3">education</p>
-      <p className="text-color3">experience</p>
-      <p className="text-color3">clear</p>
+    <div className="flex gap-2">
+      <p className="text-white">help</p>
+      <p className="text-white">about</p>
+      <p className="text-white">contact</p>
+      <p className="text-white">projects/</p>
+      <p className="text-white">skills/</p>
+      <p className="text-white">education/</p>
+      <p className="text-white">experience/</p>
+      <p className="text-white">clear</p>
     </div>
   );
 };
@@ -50,11 +50,11 @@ const HelpCommand = () => {
 const AboutCommand = () => {
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-color3">Name: Harsh Sharma</p>
-      <p className="text-color3">Age: 21</p>
-      <p className="text-color3">Location: India</p>
-      <p className="text-color3">Education: B.Tech</p>
-      <p className="text-color3">
+      <p className="text-white">Name: Harsh Keshri</p>
+      <p className="text-white">Age: 21</p>
+      <p className="text-white">Location: India</p>
+      <p className="text-white">Education: B.Tech</p>
+      <p className="text-white">
         Skills: React, Next, Node, Express, MongoDB, TailwindCSS
       </p>
     </div>
@@ -64,39 +64,59 @@ const AboutCommand = () => {
 const ContactCommand = () => {
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-color3">
+      <p className="text-white">
         Email:
         <a
-          className="text-color3"
-          href="mailto:"
+          className="text-white"
+          href="mailto:harshkeshri1234567@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          @
+          harshkeshri1234567@gmailcom
         </a>
       </p>
-      <p className="text-color3">
+      <p className="text-white">
         Github:
         <a
-          className="text-color3"
-          href="
-          "
+          className="text-white"
+          href="https://github.com/airbornharsh"
           target="_blank"
           rel="noopener noreferrer"
         >
-          @
+          @airbornharsh
         </a>
       </p>
-      <p className="text-color3">
+      <p className="text-white">
         LinkedIn:
         <a
-          className="text-color3"
-          href="
-          "
+          className="text-white"
+          href="https://linkedin.com/in/airbornharsh"
           target="_blank"
           rel="noopener noreferrer"
         >
-          @
+          @airbornharsh
+        </a>
+      </p>
+      <p className="text-white">
+        X:
+        <a
+          className="text-white"
+          href="https://x.com/airbornharsh"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @airbornharsh
+        </a>
+      </p>
+      <p className="text-white">
+        Instagram:
+        <a
+          className="text-white"
+          href="https://instagram.com/airbornharsh"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @airbornharsh
         </a>
       </p>
     </div>
@@ -106,10 +126,10 @@ const ContactCommand = () => {
 const ProjectsCommand = () => {
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-color3">Project 1</p>
-      <p className="text-color3">Project 2</p>
-      <p className="text-color3">Project 3</p>
-      <p className="text-color3">Project 4</p>
+      <p className="text-white">Project 1</p>
+      <p className="text-white">Project 2</p>
+      <p className="text-white">Project 3</p>
+      <p className="text-white">Project 4</p>
     </div>
   );
 };
@@ -117,12 +137,40 @@ const ProjectsCommand = () => {
 const SkillsCommand = () => {
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-color3">React</p>
-      <p className="text-color3">Next</p>
-      <p className="text-color3">Node</p>
-      <p className="text-color3">Express</p>
-      <p className="text-color3">MongoDB</p>
-      <p className="text-color3">TailwindCSS</p>
+      <p className="text-white">Languages:</p>
+      <ul>
+        <li className="text-white">JavaScript</li>
+        <li className="text-white">C++</li>
+        <li className="text-white">C#</li>
+        <li className="text-white">Dart</li>
+        <li className="text-white">Solidity</li>
+      </ul>
+      <p className="text-white">Frontend:</p>
+      <ul>
+        <li className="text-white">HTML</li>
+        <li className="text-white">Tailwind CSS</li>
+        <li className="text-white">React</li>
+        <li className="text-white">Flutter</li>
+        <li className="text-white">Next.js</li>
+        <li className="text-white">RazorPay</li>
+      </ul>
+      <p className="text-white">Backend:</p>
+      <ul>
+        <li className="text-white">Node.js</li>
+        <li className="text-white">Express</li>
+        <li className="text-white">MongoDB</li>
+        <li className="text-white">SST</li>
+        <li className="text-white">AWS</li>
+        <li className="text-white">NEXT.js</li>
+        <li className="text-white">HardHat</li>
+        <li className="text-white">RazorPay</li>
+      </ul>
+      <p className="text-white">Technologies:</p>
+      <ul>
+        <li className="text-white">Figma</li>
+        <li className="text-white">GitHub</li>
+        <li className="text-white">VS Code</li>
+      </ul>
     </div>
   );
 };
@@ -130,9 +178,9 @@ const SkillsCommand = () => {
 const EducationCommand = () => {
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-color3">B.Tech</p>
-      <p className="text-color3">12th</p>
-      <p className="text-color3">10th</p>
+      <p className="text-white">B.Tech</p>
+      <p className="text-white">12th</p>
+      <p className="text-white">10th</p>
     </div>
   );
 };
@@ -140,9 +188,9 @@ const EducationCommand = () => {
 const ExperienceCommand = () => {
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-color3">Company 1</p>
-      <p className="text-color3">Company 2</p>
-      <p className="text-color3">Company 3</p>
+      <p className="text-white">Company 1</p>
+      <p className="text-white">Company 2</p>
+      <p className="text-white">Company 3</p>
     </div>
   );
 };
@@ -150,7 +198,7 @@ const ExperienceCommand = () => {
 const ClearCommand = () => {
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-color3">Clear</p>
+      <p className="text-white">Clear</p>
     </div>
   );
 };

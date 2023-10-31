@@ -9,6 +9,7 @@
   "experience -numberOfExperience": "To get an experience",
   "education": "To list all the educations",
   "education -numberOfEducation": "To get an education",
+  "about": "To get my about",
   "contact": "To get my contact information",
   "clear": "To clear the console",
   "exit": "To exit the console",

@@ -7,7 +7,7 @@ const Body = () => {
 
   return (
     <div
-      className="w-full h-full px-4 text-white"
+      className="w-full h-full px-4 text-white overflow-x-clip overflow-y-auto scroll-bar-hide"
       onClick={() => {
         inputRef.current?.focus();
       }}
