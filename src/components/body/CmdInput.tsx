@@ -11,40 +11,20 @@ const CmdInput = ({ inputRef }: CmdInputProps) => {
   const [cmd, setCmd] = useState<string>("");
   const [cmdList, setCmdList] = useState<string[]>([]);
 
-  // const CmdAnalyze = (tempCmd: string) => {
-  //   console.log(tempCmd);
-  // };
-
   const BreakCmd = (tempCmd: string) => {
     const tempCmdList = tempCmd.split(" ");
     setCmdList(tempCmdList);
     Ctx.setSuggestions(tempCmdList[tempCmdList.length - 1]);
   };
 
-  // const IsValid = () => {
-  //   const tempCmdList = cmd.split(" ");
-  //   let isValid = true;
-
-  //   if (tempCmdList.length === 0) {
-  //     return false;
-  //   }
-
-  //   if (tempCmdList.length > 0) {
-  //     tempCmdList.forEach((cmd) => {
-  //       if (!CheckCommand(cmd)) {
-  //         isValid = false;
-  //       }
-  //     });
-  //   }
-
-  //   return isValid;
-  // };
-
   const onCmdSubmit = () => {
     try {
       Ctx.clearSuggestions();
       if (cmd.trim() == "clear") {
         Ctx.history.clearStoredLi();
+        return;
+      } else if (cmd.trim() == "exit") {
+        Ctx.handleClose(true);
         return;
       }
 
