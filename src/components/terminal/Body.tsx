@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import CmdInput from "../Body/CmdInput";
+import CmdInput from "../body/CmdInput";
+import CmdOutput from "../body/CmdOutput";
 
 const Body = () => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -13,6 +14,7 @@ const Body = () => {
     >
       <p className="font-medium text-sm">Type "help" for help</p>
       <ul className="flex flex-col items-start">
+        <CmdOutput />
         <CmdInput inputRef={inputRef} />
       </ul>
     </div>

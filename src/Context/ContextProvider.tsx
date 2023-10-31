@@ -5,6 +5,7 @@ const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
   const [loader, setLoader] = useState(false);
   const [maximized, setMaximized] = useState(false);
   const [closed, setClosed] = useState(false);
+  const [storedLi, setStoredLi] = useState<JSX.Element[]>([]);
 
   const setLoaderFn = (data: boolean) => {
     setLoader(data);
@@ -21,18 +22,10 @@ const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
     return data;
   };
 
-  // const ContextData = {
-  //   util: {
-  //     loader: loader,
-  //     setLoader: setLoaderFn,
-  //   },
-  //   maximized: maximized,
-  //   handleMaximize: setMaximizedFn,
-  //   minimized: minimized,
-  //   handleMinimize: setMinimizedFn,
-  //   closed: closed,
-  //   handleClose: setClosedFn,
-  // };
+  const addStoredLiFn = (data: JSX.Element[]) => {
+    setStoredLi((prev) => prev.concat(data));
+    return data;
+  };
 
   return (
     <Context.Provider
@@ -45,6 +38,10 @@ const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
         handleMaximize: setMaximizedFn,
         closed: closed,
         handleClose: setClosedFn,
+        history: {
+          storedLi: storedLi,
+          addStoredLi: addStoredLiFn,
+        },
       }}
     >
       {props.children}

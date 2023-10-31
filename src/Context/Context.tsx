@@ -15,6 +15,12 @@ const Context = React.createContext({
   handleClose: (data: boolean) => {
     return data;
   },
+  history: {
+    storedLi: [] as Array<JSX.Element>,
+    addStoredLi: (data: JSX.Element[]) => {
+      return data;
+    },
+  },
 });
 
 export default Context;
