@@ -11,6 +11,7 @@ export default {
       warning: "#E4CE06",
       success: "#56E39F",
       white: "#FFFFFF",
+      black: "#000000",
       grey: "#A0AEC0",
       transparent: "transparent",
     },

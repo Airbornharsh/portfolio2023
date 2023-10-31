@@ -11,6 +11,7 @@ const Body = () => {
         inputRef.current?.focus();
       }}
     >
+      <p className="font-medium text-sm">Type "help" for help</p>
       <ul className="flex flex-col items-start">
         <CmdInput inputRef={inputRef} />
       </ul>
