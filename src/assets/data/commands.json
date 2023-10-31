@@ -1,0 +1,16 @@
+{
+  "help": "This is a help message",
+  "ls": "To list all the routes",
+  "skills": "To list all the skills",
+  "skill -numberOfSkill": "To get a skill",
+  "projects": "To list all the projects",
+  "project -numberOfProject": "To get a project",
+  "experiences": "To list all the experiences",
+  "experience -numberOfExperience": "To get an experience",
+  "education": "To list all the educations",
+  "education -numberOfEducation": "To get an education",
+  "contact": "To get my contact information",
+  "clear": "To clear the console",
+  "exit": "To exit the console",
+  "pwd": "To get the current path"
+}
