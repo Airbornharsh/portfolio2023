@@ -24,6 +24,13 @@ const Context = React.createContext({
       return;
     },
   },
+  suggestions: [] as string[],
+  setSuggestions: (data: string) => {
+    return data;
+  },
+  clearSuggestions: () => {
+    return;
+  },
 });
 
 export default Context;

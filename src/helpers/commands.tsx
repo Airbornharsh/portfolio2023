@@ -26,22 +26,54 @@ const CheckCommandAndExecute = (command: string) => {
   } else if (command === "experience") {
     return ExperienceCommand();
   } else {
-    return "Command not found";
+    return (
+      <li className="font-medium">
+        <p className="text-error">
+          The term '{command}' is not recognized as the name of a cmdlet,
+          function, script file, or operable program.{" "}
+        </p>
+        <p className="text-white">Type "help" or "cls" for assistance.</p>
+      </li>
+    );
   }
 };
 
 const HelpCommand = () => {
   const arrow = ">";
   return (
-    <div className="flex gap-2 font-medium">
-      <p className="text-white">-{arrow} help</p>
-      <p className="text-white">about</p>
-      <p className="text-white">contact</p>
-      <p className="text-white">projects/</p>
-      <p className="text-white">skills/</p>
-      <p className="text-white">education/</p>
-      <p className="text-white">experience/</p>
-      <p className="text-white">clear</p>
+    <div className="flex gap-2 font-medium flex-col">
+      <span className="text-white flex gap-2">
+        <p>-{arrow}</p>
+        <p className="text-success">help</p>
+      </span>
+      <span className="text-white flex gap-2">
+        <p>-{arrow}</p>
+        <p className="text-success">about</p>
+      </span>
+      <span className="text-white flex gap-2">
+        <p>-{arrow}</p>
+        <p className="text-success">contact</p>
+      </span>
+      <span className="text-white flex gap-2">
+        <p>-{arrow}</p>
+        <p className="text-success">projects</p>
+      </span>
+      <span className="text-white flex gap-2">
+        <p>-{arrow}</p>
+        <p className="text-success">skills</p>
+      </span>
+      <span className="text-white flex gap-2">
+        <p>-{arrow}</p>
+        <p className="text-success">education</p>
+      </span>
+      <span className="text-white flex gap-2">
+        <p>-{arrow}</p>
+        <p className="text-success">experience</p>
+      </span>
+      <span className="text-white flex gap-2">
+        <p>-{arrow}</p>
+        <p className="text-success">clear</p>
+      </span>
     </div>
   );
 };

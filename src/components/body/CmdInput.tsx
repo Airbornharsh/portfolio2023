@@ -18,6 +18,7 @@ const CmdInput = ({ inputRef }: CmdInputProps) => {
   const BreakCmd = (tempCmd: string) => {
     const tempCmdList = tempCmd.split(" ");
     setCmdList(tempCmdList);
+    Ctx.setSuggestions(tempCmdList[tempCmdList.length - 1]);
   };
 
   // const IsValid = () => {
@@ -41,6 +42,7 @@ const CmdInput = ({ inputRef }: CmdInputProps) => {
 
   const onCmdSubmit = () => {
     try {
+      Ctx.clearSuggestions();
       if (cmd.trim() == "clear") {
         Ctx.history.clearStoredLi();
         return;
