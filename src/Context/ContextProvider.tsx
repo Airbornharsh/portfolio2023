@@ -3,20 +3,18 @@ import Context from "./Context";
 
 const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
   const [loader, setLoader] = useState(false);
+  const [maximized, setMaximized] = useState(false);
+  const [closed, setClosed] = useState(false);
 
   const setLoaderFn = (data: boolean) => {
     setLoader(data);
     return data;
   };
 
-  const [maximized, setMaximized] = useState(false);
-
   const setMaximizedFn = (data: boolean) => {
     setMaximized(data);
     return data;
   };
-
-  const [closed, setClosed] = useState(false);
 
   const setClosedFn = (data: boolean) => {
     setClosed(data);
