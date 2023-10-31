@@ -40,39 +40,48 @@ const CmdInput = ({ inputRef }: CmdInputProps) => {
   // };
 
   const onCmdSubmit = () => {
-    const res = CheckCommandAndExecute(cmd);
+    try {
+      if (cmd.trim() == "clear") {
+        Ctx.history.clearStoredLi();
+        return;
+      }
 
-    const tempCmdList = cmd.split(" ");
+      const res = CheckCommandAndExecute(cmd);
 
-    Ctx.history.addStoredLi([
-      <li className="flex flex-col font-semibold w-[100%] max-w-[100%] overflow-clip">
-        <div className="flex font-semibold w-[100%] max-w-[100%] overflow-clip">
-          <p className="text-color3">harsh</p>
-          <p className="text-grey">@</p>
-          <p className="text-success">airbornharsh</p>
-          <p className="text-grey ml-2 mr-2">$</p>
-          {tempCmdList.map((cmd, index) => {
-            const checkedCmd = CheckCommand(cmd);
-            return (
-              <p
-                className="font-medium"
-                key={index}
-                style={{
-                  color: checkedCmd ? "#00ff00" : "#ff0000",
-                  marginRight: index === cmdList.length - 1 ? "0" : "0.5rem",
-                }}
-              >
-                {cmd}
-              </p>
-            );
-          })}
-        </div>
-        <div>{res}</div>
-      </li>,
-    ]);
+      const tempCmdList = cmd.split(" ");
 
-    setCmd("");
-    setCmdList([]);
+      Ctx.history.addStoredLi([
+        <li className="flex flex-col font-semibold w-[100%] max-w-[100%] overflow-clip">
+          <div className="flex font-semibold w-[100%] max-w-[100%] overflow-clip">
+            <p className="text-color3">harsh</p>
+            <p className="text-grey">@</p>
+            <p className="text-success">airbornharsh</p>
+            <p className="text-grey ml-2 mr-2">$</p>
+            {tempCmdList.map((cmd, index) => {
+              const checkedCmd = CheckCommand(cmd);
+              return (
+                <p
+                  className="font-medium"
+                  key={index}
+                  style={{
+                    color: checkedCmd ? "#00ff00" : "#ff0000",
+                    marginRight: index === cmdList.length - 1 ? "0" : "0.5rem",
+                  }}
+                >
+                  {cmd}
+                </p>
+              );
+            })}
+          </div>
+          <div>{res}</div>
+        </li>,
+      ]);
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setCmd("");
+      setCmdList([]);
+    }
   };
 
   return (
@@ -101,9 +110,9 @@ const CmdInput = ({ inputRef }: CmdInputProps) => {
         onSubmit={(e) => {
           e.preventDefault();
           // if (IsValid()) {
-            onCmdSubmit();
+          onCmdSubmit();
           // } else {
-            // alert("Invalid Command");
+          // alert("Invalid Command");
           // }
         }}
       >

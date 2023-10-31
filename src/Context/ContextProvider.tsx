@@ -27,6 +27,11 @@ const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
     return data;
   };
 
+  const clearStoredLiFn = () => {
+    setStoredLi([]);
+    return;
+  };
+
   return (
     <Context.Provider
       value={{
@@ -41,6 +46,7 @@ const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
         history: {
           storedLi: storedLi,
           addStoredLi: addStoredLiFn,
+          clearStoredLi: clearStoredLiFn,
         },
       }}
     >

@@ -20,6 +20,9 @@ const Context = React.createContext({
     addStoredLi: (data: JSX.Element[]) => {
       return data;
     },
+    clearStoredLi: () => {
+      return;
+    },
   },
 });
 

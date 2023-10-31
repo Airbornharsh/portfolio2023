@@ -25,17 +25,16 @@ const CheckCommandAndExecute = (command: string) => {
     return EducationCommand();
   } else if (command === "experience") {
     return ExperienceCommand();
-  } else if (command === "clear") {
-    return ClearCommand();
   } else {
     return "Command not found";
   }
 };
 
 const HelpCommand = () => {
+  const arrow = ">";
   return (
-    <div className="flex gap-2">
-      <p className="text-white">help</p>
+    <div className="flex gap-2 font-medium">
+      <p className="text-white">-{arrow} help</p>
       <p className="text-white">about</p>
       <p className="text-white">contact</p>
       <p className="text-white">projects/</p>
@@ -49,7 +48,7 @@ const HelpCommand = () => {
 
 const AboutCommand = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 font-medium">
       <p className="text-white">Name: Harsh Keshri</p>
       <p className="text-white">Age: 21</p>
       <p className="text-white">Location: India</p>
@@ -63,7 +62,7 @@ const AboutCommand = () => {
 
 const ContactCommand = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 font-medium">
       <p className="text-white">
         Email:
         <a
@@ -125,7 +124,7 @@ const ContactCommand = () => {
 
 const ProjectsCommand = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 font-medium">
       <p className="text-white">Project 1</p>
       <p className="text-white">Project 2</p>
       <p className="text-white">Project 3</p>
@@ -136,7 +135,7 @@ const ProjectsCommand = () => {
 
 const SkillsCommand = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 font-medium">
       <p className="text-white">Languages:</p>
       <ul>
         <li className="text-white">JavaScript</li>
@@ -177,7 +176,7 @@ const SkillsCommand = () => {
 
 const EducationCommand = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 font-medium">
       <p className="text-white">B.Tech</p>
       <p className="text-white">12th</p>
       <p className="text-white">10th</p>
@@ -187,18 +186,10 @@ const EducationCommand = () => {
 
 const ExperienceCommand = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 font-medium">
       <p className="text-white">Company 1</p>
       <p className="text-white">Company 2</p>
       <p className="text-white">Company 3</p>
-    </div>
-  );
-};
-
-const ClearCommand = () => {
-  return (
-    <div className="flex flex-col gap-2">
-      <p className="text-white">Clear</p>
     </div>
   );
 };
