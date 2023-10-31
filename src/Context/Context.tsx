@@ -11,10 +11,6 @@ const Context = React.createContext({
   handleMaximize: (data: boolean) => {
     return data;
   },
-  minimized: false,
-  handleMinimize: (data: boolean) => {
-    return data;
-  },
   closed: false,
   handleClose: (data: boolean) => {
     return data;

@@ -1,14 +1,21 @@
+import { useContext } from "react";
+import Context from "../../Context/Context";
+
 const Head = () => {
+  const Ctx = useContext(Context);
   const handleMinimize = () => {
     console.log("Minimize");
+    Ctx.handleMaximize(false);
   };
 
   const handleMaximize = () => {
     console.log("Maximize");
+    Ctx.handleMaximize(true);
   };
 
   const handleClose = () => {
     console.log("Close");
+    Ctx.handleClose(true);
   };
 
   return (

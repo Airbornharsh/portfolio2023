@@ -16,13 +16,6 @@ const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
     return data;
   };
 
-  const [minimized, setMinimized] = useState(false);
-
-  const setMinimizedFn = (data: boolean) => {
-    setMinimized(data);
-    return data;
-  };
-
   const [closed, setClosed] = useState(false);
 
   const setClosedFn = (data: boolean) => {
@@ -52,8 +45,6 @@ const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
         },
         maximized: maximized,
         handleMaximize: setMaximizedFn,
-        minimized: minimized,
-        handleMinimize: setMinimizedFn,
         closed: closed,
         handleClose: setClosedFn,
       }}
