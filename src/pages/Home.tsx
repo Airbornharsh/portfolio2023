@@ -41,10 +41,18 @@ const Home = () => {
           width: !Ctx.closed ? "96vw" : "3rem",
           height: !Ctx.closed ? "96vh" : "3rem",
           bottom: Ctx.closed ? "1rem" : "unset",
-          top: Ctx.closed ? "unset" : `calc(${position.y}px + 50%)`,
+          top: Ctx.closed
+            ? "unset"
+            : Ctx.maximized
+            ? `50%`
+            : `calc(${position.y}px + 50%)`,
           transform: Ctx.closed ? "translateX(-50%)" : "translate(-50%,-50%)",
           zIndex: Ctx.closed ? 100 : 0,
-          left: Ctx.closed ? "50%" : `calc(${position.x}px + 50%)`,
+          left: Ctx.closed
+            ? "50%"
+            : Ctx.maximized
+            ? "50%"
+            : `calc(${position.x}px + 50%)`,
           // top: position.y,
           cursor: isDragging ? "grabbing" : "grab",
         }}
