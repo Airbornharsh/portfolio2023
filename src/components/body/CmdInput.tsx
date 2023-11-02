@@ -100,7 +100,7 @@ const CmdInput = ({ inputRef }: CmdInputProps) => {
         }}
       >
         <input
-          className="text-black w-0"
+          className="text-black w-20"
           autoFocus={true}
           ref={inputRef}
           type="text"
