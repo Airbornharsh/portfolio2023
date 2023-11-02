@@ -8,7 +8,7 @@ interface BodyProps {
 
 const Body = ({ inputRef }: BodyProps) => {
   return (
-    <div className="w-full h-full px-4 text-white overflow-x-clip overflow-y-auto scroll-bar-hide">
+    <div className="w-full h-full px-4 pb-4 text-white overflow-x-clip overflow-y-auto scroll-bar-hide">
       <p className="font-medium text-sm">Type "help" for help</p>
       <ul className="flex flex-col items-start">
         <CmdOutput />
