@@ -5,6 +5,7 @@ import Context from "../Context/Context";
 
 const Home = () => {
   const Ctx = useContext(Context);
+  const [isNew, setIsNew] = useState<boolean>(true);
   const inputRef = useRef<HTMLInputElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
@@ -82,7 +83,7 @@ const Home = () => {
             }}
           >
             <Head />
-            <Body inputRef={inputRef} />
+            <Body inputRef={inputRef} isNew={isNew} setIsNew={setIsNew} />
           </div>
         )}
       </div>

@@ -1,15 +1,21 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CheckCommand, CheckCommandAndExecute } from "../../helpers/commands";
 import Context from "../../Context/Context";
 
 interface CmdInputProps {
   inputRef: React.RefObject<HTMLInputElement>;
+  isNew: boolean;
+  setIsNew: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const CmdInput = ({ inputRef }: CmdInputProps) => {
+const CmdInput = ({ inputRef, isNew, setIsNew }: CmdInputProps) => {
   const Ctx = useContext(Context);
   const [cmd, setCmd] = useState<string>("");
   const [cmdList, setCmdList] = useState<string[]>([]);
+
+  useEffect(() => {
+    setIsNew(true);
+  }, [inputRef, setIsNew]);
 
   const BreakCmd = (tempCmd: string) => {
     const tempCmdList = tempCmd.split(" ");
@@ -17,8 +23,21 @@ const CmdInput = ({ inputRef }: CmdInputProps) => {
     Ctx.setSuggestions(tempCmdList[tempCmdList.length - 1]);
   };
 
+  const onNewSubmit = () => {
+    if (cmd == "y") {
+      setIsNew(false);
+    } else if (cmd == "n") {
+      alert("You are Redirecting to my Visual portfolio");
+      window.location.href = "https://harshkeshri.com";
+    }
+  };
+
   const onCmdSubmit = () => {
     try {
+      if (isNew) {
+        onNewSubmit();
+        return;
+      }
       Ctx.clearSuggestions();
       if (cmd.trim().toLocaleLowerCase() == "clear") {
         Ctx.history.clearStoredLi();
@@ -72,21 +91,45 @@ const CmdInput = ({ inputRef }: CmdInputProps) => {
       <p className="text-grey">@</p>
       <p className="text-success">airbornharsh</p>
       <p className="text-grey ml-2 mr-2">$</p>
-      {cmdList.map((tempCmd, index) => {
-        const checkedCmd = CheckCommand(tempCmd);
-        return (
-          <p
-            className="font-medium"
-            key={"cmdview" + index}
-            style={{
-              color: checkedCmd ? "#00ff00" : "#ff0000",
-              marginRight: index === cmdList.length - 1 ? "0" : "0.5rem",
-            }}
-          >
-            {tempCmd}
-          </p>
-        );
-      })}
+      {isNew ||
+        cmdList.map((tempCmd, index) => {
+          const checkedCmd = CheckCommand(tempCmd);
+          return (
+            <p
+              className="font-medium"
+              key={"cmdview" + index}
+              style={{
+                color: checkedCmd ? "#00ff00" : "#ff0000",
+                marginRight: index === cmdList.length - 1 ? "0" : "0.5rem",
+              }}
+            >
+              {tempCmd}
+            </p>
+          );
+        })}
+      {isNew && (
+        <p
+          className="font-medium text-white"
+          style={{
+            marginRight: cmdList.length === 0 ? "0" : "0.5rem",
+          }}
+        >
+          Do you know about terminal? y/n&#41;
+        </p>
+      )}
+      {isNew && (
+        <p
+          className="font-medium"
+          style={{
+            color:
+              cmd.trim().toLowerCase() == "y" || cmd.trim().toLowerCase() == "n"
+                ? "#56E39F"
+                : "#E42929",
+          }}
+        >
+          {cmd}
+        </p>
+      )}
       <span className="blinking-cursor">|</span>
       <form
         onSubmit={(e) => {
