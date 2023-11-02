@@ -74,10 +74,12 @@ const CmdInput = ({ inputRef }: CmdInputProps) => {
       <p className="text-grey ml-2 mr-2">$</p>
       {cmdList.map((cmd, index) => {
         const checkedCmd = CheckCommand(cmd);
+
+        alert(cmd);
         return (
           <p
             className="font-medium"
-            key={index}
+            key={"cmdview" + index}
             style={{
               color: checkedCmd ? "#00ff00" : "#ff0000",
               marginRight: index === cmdList.length - 1 ? "0" : "0.5rem",
