@@ -37,16 +37,15 @@ const Home = () => {
             />
           </div>
         ) : (
-          <div className="w-full h-full flex flex-col">
+          <div
+            className="w-full h-full flex flex-col"
+            onClick={() => {
+              // if inputRef.current.
+              inputRef.current?.focus();
+            }}
+          >
             <Head />
-            <div
-              onClick={() => {
-                // if inputRef.current.
-                inputRef.current?.focus();
-              }}
-            >
-              <Body inputRef={inputRef} />
-            </div>
+            <Body inputRef={inputRef} />
           </div>
         )}
       </div>
