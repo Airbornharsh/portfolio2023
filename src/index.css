@@ -26,3 +26,23 @@
     color: #ffffff;
   }
 }
+
+@font-face {
+  font-family: "Terminal Medium";
+  src: local("Terminal Medium"), url("/fonts/Terminal.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Reiswar";
+  src: url("/fonts/reiswar.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "TR Larabie";
+  src: url("/fonts/TR_Larabie.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "VideoType";
+  src: url("/fonts/videotype.otf") format("woff");
+}

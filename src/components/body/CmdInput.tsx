@@ -52,8 +52,11 @@ const CmdInput = ({ inputRef, isNew, setIsNew }: CmdInputProps) => {
       const tempCmdList = cmd.split(" ");
 
       Ctx.history.addStoredLi([
-        <li className="flex flex-col font-semibold w-[100%] max-w-[100%] overflow-clip">
-          <div className="flex font-semibold w-[100%] max-w-[100%] overflow-clip">
+        <li
+          key={"cmd" + Date.now()}
+          className="flex flex-col font-semibold w-[100%] max-w-[100%] "
+        >
+          <div className="flex font-semibold w-[100%] max-w-[100%] ">
             <p className="text-color3">harsh</p>
             <p className="text-grey">@</p>
             <p className="text-success">airbornharsh</p>
@@ -74,7 +77,9 @@ const CmdInput = ({ inputRef, isNew, setIsNew }: CmdInputProps) => {
               );
             })}
           </div>
-          <div>{res}</div>
+          <div className="pl-3 font-videoType text-[0.9rem] font-thin ">
+            {res}
+          </div>
         </li>,
       ]);
     } catch (e) {

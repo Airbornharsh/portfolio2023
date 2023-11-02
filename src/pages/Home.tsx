@@ -17,7 +17,7 @@ const Home = () => {
       x: e.clientX - position.x,
       y: e.clientY - position.y,
     });
-  };
+  };  
 
   const handleMouseMove = (e: { clientX: number; clientY: number }) => {
     if (isDragging) {
@@ -32,9 +32,9 @@ const Home = () => {
   };
 
   return (
-    <div className="w-screen h-screen bg-color1 overflow-hidden">
+    <div className="w-screen h-screen bg-color1  font-trLarabie">
       <div
-        className="bg-color1  rounded-2xl shadow-sm shadow-color3 terminal-Container border-[0.2rem] border-color3 overflow-hidden fixed "
+        className="bg-color1  rounded-2xl shadow-sm shadow-color3 terminal-Container border-[0.1rem] border-color3 fixed "
         style={{
           maxWidth: Ctx.maximized ? "100%" : "60rem",
           maxHeight: Ctx.maximized ? "100%" : "40rem",

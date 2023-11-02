@@ -1,5 +1,7 @@
 import CommandData from "../assets/data/commands.json";
 
+const arrow = ">";
+
 const CheckCommand = (command: string) => {
   const commands = Object.keys(CommandData);
 
@@ -28,7 +30,7 @@ const CheckCommandAndExecute = (command: string) => {
     return ExperienceCommand();
   } else {
     return (
-      <li className="font-medium">
+      <li>
         <p className="text-error">
           The term '{command}' is not recognized as the name of a cmdlet,
           function, script file, or operable program.{" "}
@@ -40,40 +42,39 @@ const CheckCommandAndExecute = (command: string) => {
 };
 
 const HelpCommand = () => {
-  const arrow = ">";
   return (
-    <div className="flex gap-2 font-medium flex-col">
+    <div className="flex gap-2 flex-col ">
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-success">help</p>
+        <p className="text-commandResult">help</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-success">about</p>
+        <p className="text-commandResult">about</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-success">contact</p>
+        <p className="text-commandResult">contact</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-success">projects</p>
+        <p className="text-commandResult">projects</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-success">skills</p>
+        <p className="text-commandResult">skills</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-success">education</p>
+        <p className="text-commandResult">education</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-success">experience</p>
+        <p className="text-commandResult">experience</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-success">clear</p>
+        <p className="text-commandResult">clear</p>
       </span>
     </div>
   );
@@ -81,21 +82,70 @@ const HelpCommand = () => {
 
 const AboutCommand = () => {
   return (
-    <div className="flex flex-col gap-2 font-medium">
-      <p className="text-white">Name: Harsh Keshri</p>
-      <p className="text-white">Age: 21</p>
-      <p className="text-white">Location: India</p>
-      <p className="text-white">Education: B.Tech</p>
-      <p className="text-white">
-        Skills: React, Next, Node, Express, MongoDB, TailwindCSS
-      </p>
+    <div className="flex flex-col gap-2 ">
+      <span className="text-white flex gap-2">
+        <pre>-{arrow}</pre>
+        <p className="text-commandResult">
+          Hello World, My Name is Harsh Keshri.
+        </p>
+      </span>
+      <span className="text-white flex gap-2">
+        <pre>-{arrow}</pre>
+        <p className="text-commandResult">I am a Full Stack Developer.</p>
+      </span>
+      <span className="text-white flex gap-2">
+        <pre>-{arrow}</pre>
+        <p className="text-commandResult">
+          I work with technologies like React, Next Js, Tailwind CSS, Node Js,
+          and more.
+        </p>
+      </span>
+      <span className="text-white flex gap-2">
+        <pre>-{arrow}</pre>
+        <p className="text-commandResult">
+          I'm always excited to learn new things and implement them in my work.
+        </p>
+      </span>
+      <span className="text-white flex gap-2">
+        <pre>-{arrow}</pre>
+        <p className="text-commandResult">
+          I started coding in my 7th Standard, primarily using Java.
+        </p>
+      </span>
+      <span className="text-white flex gap-2">
+        <pre>-{arrow}</pre>
+        <p className="text-commandResult">
+          I dived into coding in December 2021.
+        </p>
+      </span>
+      <span className="text-white flex gap-2">
+        <pre>-{arrow}</pre>
+        <p className="text-commandResult">
+          I began with Web Development and learned Flutter to enter the app
+          development field.
+        </p>
+      </span>
+      <span className="text-white flex gap-2">
+        <pre>-{arrow}</pre>
+        <p className="text-commandResult">
+          I've also explored the Game Development field using C#, primarily for
+          a Hackathon.
+        </p>
+      </span>
+      <span className="text-white flex gap-2">
+        <pre>-{arrow}</pre>
+        <p className="text-commandResult">
+          I have some basic knowledge of Blockchain technologies, including
+          Solidity, Smart Contracts, and Ethereum.
+        </p>
+      </span>
     </div>
   );
 };
 
 const ContactCommand = () => {
   return (
-    <div className="flex flex-col gap-2 font-medium">
+    <div className="flex flex-col gap-2 ">
       <p className="text-white">
         Email:
         <a
@@ -157,7 +207,7 @@ const ContactCommand = () => {
 
 const ProjectsCommand = () => {
   return (
-    <div className="flex flex-col gap-2 font-medium">
+    <div className="flex flex-col gap-2 ">
       <p className="text-white">Project 1</p>
       <p className="text-white">Project 2</p>
       <p className="text-white">Project 3</p>
@@ -168,7 +218,7 @@ const ProjectsCommand = () => {
 
 const SkillsCommand = () => {
   return (
-    <div className="flex flex-col gap-2 font-medium">
+    <div className="flex flex-col gap-2 ">
       <p className="text-white">Languages:</p>
       <ul>
         <li className="text-white">JavaScript</li>
@@ -209,7 +259,7 @@ const SkillsCommand = () => {
 
 const EducationCommand = () => {
   return (
-    <div className="flex flex-col gap-2 font-medium">
+    <div className="flex flex-col gap-2 ">
       <p className="text-white">B.Tech</p>
       <p className="text-white">12th</p>
       <p className="text-white">10th</p>
@@ -219,7 +269,7 @@ const EducationCommand = () => {
 
 const ExperienceCommand = () => {
   return (
-    <div className="flex flex-col gap-2 font-medium">
+    <div className="flex flex-col gap-2 ">
       <p className="text-white">Company 1</p>
       <p className="text-white">Company 2</p>
       <p className="text-white">Company 3</p>
