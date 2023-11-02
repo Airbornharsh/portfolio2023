@@ -68,14 +68,13 @@ const CmdInput = ({ inputRef }: CmdInputProps) => {
 
   return (
     <li className="flex font-semibold w-[100%] max-w-[100%] ">
+      <p className="text-success">{cmd}</p>
       <p className="text-color3">harsh</p>
       <p className="text-grey">@</p>
       <p className="text-success">airbornharsh</p>
       <p className="text-grey ml-2 mr-2">$</p>
-      {cmdList.map((cmd, index) => {
-        const checkedCmd = CheckCommand(cmd);
-
-        alert(cmd);
+      {cmdList.map((tempCmd, index) => {
+        const checkedCmd = CheckCommand(tempCmd);
         return (
           <p
             className="font-medium"
@@ -85,7 +84,7 @@ const CmdInput = ({ inputRef }: CmdInputProps) => {
               marginRight: index === cmdList.length - 1 ? "0" : "0.5rem",
             }}
           >
-            {cmd}
+            {tempCmd}
           </p>
         );
       })}
