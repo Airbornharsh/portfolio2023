@@ -14,6 +14,13 @@ const Body = ({ inputRef, isNew, setIsNew }: BodyProps) => {
       {isNew || <p className="font-medium text-sm">Type "help" for help</p>}
       <ul className="flex flex-col items-start">
         <CmdOutput />
+        {isNew && (
+          <p
+            className="font-medium text-white"
+          >
+            Do you know about terminal? y/n&#41;
+          </p>
+        )}
         <CmdInput inputRef={inputRef} isNew={isNew} setIsNew={setIsNew} />
         {isNew || <CmdSuggestion />}
       </ul>

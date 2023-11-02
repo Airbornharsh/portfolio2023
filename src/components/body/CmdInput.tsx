@@ -109,16 +109,6 @@ const CmdInput = ({ inputRef, isNew, setIsNew }: CmdInputProps) => {
         })}
       {isNew && (
         <p
-          className="font-medium text-white"
-          style={{
-            marginRight: cmdList.length === 0 ? "0" : "0.5rem",
-          }}
-        >
-          Do you know about terminal? y/n&#41;
-        </p>
-      )}
-      {isNew && (
-        <p
           className="font-medium"
           style={{
             color:
