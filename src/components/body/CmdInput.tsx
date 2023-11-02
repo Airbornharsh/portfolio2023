@@ -20,10 +20,10 @@ const CmdInput = ({ inputRef }: CmdInputProps) => {
   const onCmdSubmit = () => {
     try {
       Ctx.clearSuggestions();
-      if (cmd.trim() == "clear") {
+      if (cmd.trim().toLocaleLowerCase() == "clear") {
         Ctx.history.clearStoredLi();
         return;
-      } else if (cmd.trim() == "exit") {
+      } else if (cmd.trim().toLowerCase() == "exit") {
         Ctx.handleClose(true);
         return;
       }
@@ -68,7 +68,6 @@ const CmdInput = ({ inputRef }: CmdInputProps) => {
 
   return (
     <li className="flex font-semibold w-[100%] max-w-[100%] ">
-      <p className="text-success">{cmd}</p>
       <p className="text-color3">harsh</p>
       <p className="text-grey">@</p>
       <p className="text-success">airbornharsh</p>

@@ -3,7 +3,7 @@ import CommandData from "../assets/data/commands.json";
 const CheckCommand = (command: string) => {
   const commands = Object.keys(CommandData);
 
-  if (commands.includes(command.trim())) {
+  if (commands.includes(command.trim().toLowerCase())) {
     return true;
   } else {
     return false;
@@ -11,6 +11,7 @@ const CheckCommand = (command: string) => {
 };
 
 const CheckCommandAndExecute = (command: string) => {
+  command = command.trim().toLowerCase();
   if (command === "help") {
     return HelpCommand();
   } else if (command === "about") {

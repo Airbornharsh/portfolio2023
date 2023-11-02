@@ -19,7 +19,7 @@ const Home = () => {
           height: !Ctx.closed ? "96vh" : "3rem",
           bottom: Ctx.closed ? "1rem" : "unset",
           top: Ctx.closed ? "unset" : "50%",
-          transform: Ctx.closed ? "unset" : "translate(-50%,-50%)",
+          transform: Ctx.closed ? "translateX(-50%)" : "translate(-50%,-50%)",
           zIndex: Ctx.closed ? 100 : 0,
         }}
       >
