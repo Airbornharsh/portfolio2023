@@ -42,7 +42,7 @@ const Home = () => {
             <div
               onClick={() => {
                 // if inputRef.current.
-                inputRef.current?.focus();
+                // inputRef.current?.focus();
               }}
             >
               <Body inputRef={inputRef} />
