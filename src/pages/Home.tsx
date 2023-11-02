@@ -40,7 +40,7 @@ const Home = () => {
           <div
           className="w-full h-full flex flex-col"
             onClick={() => {
-              inputRef.current?.focus();
+              // inputRef.current?.focus();
             }}
           >
             <Head />
