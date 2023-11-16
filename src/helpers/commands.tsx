@@ -201,49 +201,12 @@ const ContactCommand = () => {
   );
 };
 
-const ProjectCard = () => {
-  const title = "React Portfolio";
-  const description =
-    "A personal portfolio website built with React to showcase skills and projects.";
-  const technologies = ["React", "JavaScript", "HTML", "CSS"];
-  const githubLink = "https://github.com/airbornharsh";
-
-  return (
-    <div className="bg-gray-700 p-6 rounded-lg shadow-md mb-8">
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-gray-300 mb-4">{description}</p>
-      <div className="flex flex-wrap gap-2">
-        {technologies.map((tech, index) => (
-          <span
-            key={index}
-            className="bg-gray-600 text-white px-2 py-1 rounded"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-      {githubLink && (
-        <a
-          href={githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-400 hover:underline mt-2 block"
-        >
-          View on GitHub
-        </a>
-      )}
-    </div>
-  );
-};
-
-export default ProjectCard;
-
 const ProjectsCommand = () => {
   return (
     <ul className="flex flex-col gap-2 ">
       {Projects.map((project, index: number) => (
         <li
-          className="bg-gray-700 p-6 rounded-lg shadow-md mb-8 "
+          className="bg-gray-700 p-6 rounded-lg shadow-md mb-6"
           key={"project" + index + project.name}
         >
           <h3 className="text-xl font-bold mb-2">{project.name}</h3>
@@ -328,12 +291,59 @@ const SkillsCommand = () => {
   );
 };
 
+type EducationCardProps = {
+  institution: string;
+  degree: string;
+  location: string;
+  grade: string;
+  year: string;
+};
+
+const EducationCard = ({
+  institution,
+  degree,
+  location,
+  grade,
+  year,
+}: EducationCardProps) => {
+  return (
+    <div className="bg-gray-700 p-6 rounded-lg shadow-md mb-6">
+      <h3 className="text-xl font-bold mb-2">{degree}</h3>
+      <p className="text-gray-300 mb-2">
+        {institution}, {location}
+      </p>
+      <p className="text-gray-400 mb-2">Grade: {grade}</p>
+      <p className="text-gray-400">Year: {year}</p>
+    </div>
+  );
+};
+
 const EducationCommand = () => {
   return (
     <div className="flex flex-col gap-2 ">
-      <p className="text-white">B.Tech</p>
-      <p className="text-white">12th</p>
-      <p className="text-white">10th</p>
+      <EducationCard
+        degree="BTech (CSE)"
+        institution="Government College of Engineering, Kalahandi"
+        location="Bhawanipatna"
+        grade="8.61 SGPA (1st Semester)"
+        year="Ongoing"
+      />
+
+      <EducationCard
+        degree="12th"
+        institution="Nirmala English School"
+        location="Rajgangpur"
+        grade="86.4%"
+        year="Year of Passing"
+      />
+
+      <EducationCard
+        degree="10th"
+        institution="Nirmala English School"
+        location="Rajgangpur"
+        grade="82.6%"
+        year="Year of Passing"
+      />
     </div>
   );
 };
