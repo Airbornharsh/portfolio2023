@@ -10,7 +10,7 @@ interface BodyProps {
 
 const Body = ({ inputRef, isNew, setIsNew }: BodyProps) => {
   return (
-    <div className="w-full h-full px-4 pb-4 text-white overflow-auto overflow-y-auto scroll-bar-hide">
+    <div className="w-full h-full px-4 pb-4 text-white overflow-auto overflow-y-auto scroll-bar">
       {isNew || <p className="font-medium text-sm">Type "help" for help</p>}
       <ul className="flex flex-col items-start">
         <CmdOutput />

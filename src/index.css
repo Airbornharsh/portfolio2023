@@ -46,3 +46,19 @@
   font-family: "VideoType";
   src: url("/fonts/videotype.otf") format("woff");
 }
+
+.scroll-bar::-webkit-scrollbar {
+  /* scrollbar-width: thin; */
+  width: 0.3rem;
+  /* scrollbar-color: #4f228d; */
+}
+
+/* Track */
+.scroll-bar::-webkit-scrollbar-track {
+  background: #4f228d;
+}
+
+/* Handle */
+.scroll-bar::-webkit-scrollbar-thumb {
+  background: grey;
+}
