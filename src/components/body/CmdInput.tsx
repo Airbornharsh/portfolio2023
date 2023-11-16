@@ -143,8 +143,8 @@ const CmdInput = ({ inputRef, isNew, setIsNew }: CmdInputProps) => {
           type="text"
           value={cmd}
           onChange={(e) => {
-            setCmd(e.target.value);
-            BreakCmd(e.target.value);
+            setCmd(e.target.value.toLowerCase());
+            BreakCmd(e.target.value.toLowerCase());
           }}
         />
       </form>
