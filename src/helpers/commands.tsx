@@ -346,7 +346,7 @@ const EducationCommand = () => {
         institution="Nirmala English School"
         location="Rajgangpur"
         grade="86.4%"
-        year="Year of Passing"
+        year="2020"
       />
 
       <EducationCard
@@ -354,7 +354,7 @@ const EducationCommand = () => {
         institution="Nirmala English School"
         location="Rajgangpur"
         grade="82.6%"
-        year="Year of Passing"
+        year="2018"
       />
     </div>
   );
