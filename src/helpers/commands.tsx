@@ -1,4 +1,5 @@
 import CommandData from "../assets/data/commands.json";
+import Projects from "../assets/data/projects";
 
 const arrow = ">";
 
@@ -200,14 +201,78 @@ const ContactCommand = () => {
   );
 };
 
+const ProjectCard = () => {
+  const title = "React Portfolio";
+  const description =
+    "A personal portfolio website built with React to showcase skills and projects.";
+  const technologies = ["React", "JavaScript", "HTML", "CSS"];
+  const githubLink = "https://github.com/airbornharsh";
+
+  return (
+    <div className="bg-gray-700 p-6 rounded-lg shadow-md mb-8">
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-gray-300 mb-4">{description}</p>
+      <div className="flex flex-wrap gap-2">
+        {technologies.map((tech, index) => (
+          <span
+            key={index}
+            className="bg-gray-600 text-white px-2 py-1 rounded"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+      {githubLink && (
+        <a
+          href={githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:underline mt-2 block"
+        >
+          View on GitHub
+        </a>
+      )}
+    </div>
+  );
+};
+
+export default ProjectCard;
+
 const ProjectsCommand = () => {
   return (
-    <div className="flex flex-col gap-2 ">
-      <p className="text-white">Project 1</p>
-      <p className="text-white">Project 2</p>
-      <p className="text-white">Project 3</p>
-      <p className="text-white">Project 4</p>
-    </div>
+    <ul className="flex flex-col gap-2 ">
+      {Projects.map((project, index: number) => (
+        <li
+          className="bg-gray-700 p-6 rounded-lg shadow-md mb-8 "
+          key={"project" + index + project.name}
+        >
+          <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+          <p className="text-gray-300 mb-4">{project.description}</p>
+          <div className="flex flex-wrap gap-2">
+            {project.technologies.map(
+              (tech: { name: string }, index: number) => (
+                <span
+                  key={"techName" + index.toString() + tech.name}
+                  className="bg-gray-600 px-2 py-1 rounded text-commandResult"
+                >
+                  {tech.name}
+                </span>
+              )
+            )}
+          </div>
+          {project.githubLink && (
+            <a
+              href={project.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline mt-2 block"
+            >
+              View on GitHub
+            </a>
+          )}
+        </li>
+      ))}
+    </ul>
   );
 };
 
