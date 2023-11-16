@@ -6,9 +6,10 @@ interface CmdInputProps {
   inputRef: React.RefObject<HTMLInputElement>;
   isNew: boolean;
   setIsNew: React.Dispatch<React.SetStateAction<boolean>>;
+  scrollFn: () => void;
 }
 
-const CmdInput = ({ inputRef, isNew, setIsNew }: CmdInputProps) => {
+const CmdInput = ({ inputRef, isNew, setIsNew, scrollFn }: CmdInputProps) => {
   const Ctx = useContext(Context);
   const [cmd, setCmd] = useState<string>("");
   const [cmdList, setCmdList] = useState<string[]>([]);
@@ -145,6 +146,7 @@ const CmdInput = ({ inputRef, isNew, setIsNew }: CmdInputProps) => {
           onChange={(e) => {
             setCmd(e.target.value.toLowerCase());
             BreakCmd(e.target.value.toLowerCase());
+            scrollFn();
           }}
         />
       </form>
