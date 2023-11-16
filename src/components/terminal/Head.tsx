@@ -19,7 +19,7 @@ const Head = () => {
   };
 
   return (
-    <div className="bg-color2 h-10 flex items-center pl-3">
+    <div className="bg-color2 h-10 flex items-center pl-3 rounded-t-3xl">
       <ul className="flex gap-2 ">
         <li
           className="bg-error h-4 w-4 rounded-full cursor-pointer"
