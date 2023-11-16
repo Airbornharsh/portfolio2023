@@ -84,6 +84,8 @@ const HelpCommand = () => {
 const AboutCommand = () => {
   return (
     <div className="flex flex-col gap-2 text-commandResult ">
+      <h2 className="text-2xl font-bold mb-4">About Me:</h2>
+
       <span>
         <p>
           👋 Hello World! I'm Harsh Keshri, a passionate Full Stack Developer
@@ -129,6 +131,8 @@ const AboutCommand = () => {
 const ContactCommand = () => {
   return (
     <ul className="flex flex-col gap-2 list-disc list-outside pl-4 text-commandResult font-bold">
+      <h2 className="text-2xl font-bold mb-4">Contact Me:</h2>
+
       <li className="mt-1">
         <p>
           Email:{" "}
@@ -203,20 +207,22 @@ const ContactCommand = () => {
 
 const ProjectsCommand = () => {
   return (
-    <ul className="flex flex-col gap-2 ">
+    <ul className="flex flex-col gap-2 mt-6">
+      <h2 className="text-2xl font-bold mb-4">Projects:</h2>
+
       {Projects.map((project, index: number) => (
         <li
-          className="bg-gray-700 p-6 rounded-lg shadow-md mb-6"
+          className="p-6 rounded-lg shadow-md mb-6"
           key={"project" + index + project.name}
         >
           <h3 className="text-xl font-bold mb-2">{project.name}</h3>
-          <p className="text-gray-300 mb-4">{project.description}</p>
+          <p className="mb-4">{project.description}</p>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map(
               (tech: { name: string }, index: number) => (
                 <span
                   key={"techName" + index.toString() + tech.name}
-                  className="bg-gray-600 px-2 py-1 rounded text-commandResult"
+                  className="px-2 py-1 rounded text-commandResult"
                 >
                   {tech.name}
                 </span>
@@ -241,51 +247,55 @@ const ProjectsCommand = () => {
 
 const SkillsCommand = () => {
   return (
-    <div className="container mx-auto p-8 bg-gray-800 text-commandResult flex flex-wrap gap-10">
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Languages:</h2>
-        <ul className="list-disc pl-4">
-          <li>JavaScript</li>
-          <li>C++</li>
-          <li>C#</li>
-          <li>Dart</li>
-          <li>Solidity</li>
-        </ul>
-      </div>
+    <div className="container mx-auto p-8 text-commandResult ">
+      <h2 className="text-2xl font-bold mb-4">Skills:</h2>
 
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Frontend:</h2>
-        <ul className="list-disc pl-4">
-          <li>HTML</li>
-          <li>Tailwind CSS</li>
-          <li>React</li>
-          <li>Flutter</li>
-          <li>Next.js</li>
-          <li>RazorPay</li>
-        </ul>
-      </div>
+      <div className="flex flex-wrap gap-10">
+        <div className="mb-8">
+          <h2 className="text-xl font-bold mb-4">Languages:</h2>
+          <ul className="list-disc pl-4">
+            <li>JavaScript</li>
+            <li>C++</li>
+            <li>C#</li>
+            <li>Dart</li>
+            <li>Solidity</li>
+          </ul>
+        </div>
 
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Backend:</h2>
-        <ul className="list-disc pl-4">
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>MongoDB</li>
-          <li>SST</li>
-          <li>AWS</li>
-          <li>NEXT.js</li>
-          <li>HardHat</li>
-          <li>RazorPay</li>
-        </ul>
-      </div>
+        <div className="mb-8">
+          <h2 className="text-xl font-bold mb-4">Frontend:</h2>
+          <ul className="list-disc pl-4">
+            <li>HTML</li>
+            <li>Tailwind CSS</li>
+            <li>React</li>
+            <li>Flutter</li>
+            <li>Next.js</li>
+            <li>RazorPay</li>
+          </ul>
+        </div>
 
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Technologies:</h2>
-        <ul className="list-disc pl-4">
-          <li>Figma</li>
-          <li>GitHub</li>
-          <li>VS Code</li>
-        </ul>
+        <div className="mb-8">
+          <h2 className="text-xl font-bold mb-4">Backend:</h2>
+          <ul className="list-disc pl-4">
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>MongoDB</li>
+            <li>SST</li>
+            <li>AWS</li>
+            <li>NEXT.js</li>
+            <li>HardHat</li>
+            <li>RazorPay</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-bold mb-4">Technologies:</h2>
+          <ul className="list-disc pl-4">
+            <li>Figma</li>
+            <li>GitHub</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
@@ -307,20 +317,22 @@ const EducationCard = ({
   year,
 }: EducationCardProps) => {
   return (
-    <div className="bg-gray-700 p-6 rounded-lg shadow-md mb-6">
+    <div className="p-6 rounded-lg shadow-md mb-6">
       <h3 className="text-xl font-bold mb-2">{degree}</h3>
-      <p className="text-gray-300 mb-2">
+      <p className="mb-2">
         {institution}, {location}
       </p>
-      <p className="text-gray-400 mb-2">Grade: {grade}</p>
-      <p className="text-gray-400">Year: {year}</p>
+      <p className="mb-2">Grade: {grade}</p>
+      <p>Year: {year}</p>
     </div>
   );
 };
 
 const EducationCommand = () => {
   return (
-    <div className="flex flex-col gap-2 ">
+    <div className="flex flex-col gap-2 text-commandResult mt-6">
+      <h2 className="text-2xl font-bold mb-4">Education:</h2>
+
       <EducationCard
         degree="BTech (CSE)"
         institution="Government College of Engineering, Kalahandi"
@@ -350,10 +362,32 @@ const EducationCommand = () => {
 
 const ExperienceCommand = () => {
   return (
-    <div className="flex flex-col gap-2 ">
-      <p className="text-white">Company 1</p>
-      <p className="text-white">Company 2</p>
-      <p className="text-white">Company 3</p>
+    <div className="container mx-auto p-8 text-commandResult">
+      <h2 className="text-2xl font-bold mb-4">Work Experience:</h2>
+
+      {/* Experience 1 */}
+      <div className="p-6 rounded-lg shadow-md mb-8">
+        <h3 className="text-xl font-bold mb-2">
+          Intelligent Cloud Applications
+        </h3>
+        <p className="mb-2">Full Stack Web Developer</p>
+        <p className="mb-2">
+          Managed backend operations, oversaw multiple websites, troubleshooted
+          errors, devised innovative solutions, and led an intern team.
+        </p>
+        <p className="text-gray-400">From: November 2022 - Present</p>
+      </div>
+
+      {/* Experience 2 */}
+      <div className="p-6 rounded-lg shadow-md mb-8">
+        <h3 className="text-xl font-bold mb-2">BWorkz</h3>
+        <p className="mb-2">Full Stack Web Developer</p>
+        <p className="mb-2">
+          Developed entire backend and frontend, contributed to logic
+          implementation, and provided assistance across the project.
+        </p>
+        <p className="text-gray-400">From: August 2022 - October 2022</p>
+      </div>
     </div>
   );
 };

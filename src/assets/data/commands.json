@@ -5,7 +5,7 @@
   "skill -numberOfSkill": "To get a skill",
   "projects": "To list all the projects",
   "project -numberOfProject": "To get a project",
-  "experiences": "To list all the experiences",
+  "experience": "To list all the experiences",
   "experience -numberOfExperience": "To get an experience",
   "education": "To list all the educations",
   "education -numberOfEducation": "To get an education",
