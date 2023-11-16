@@ -213,41 +213,52 @@ const ProjectsCommand = () => {
 
 const SkillsCommand = () => {
   return (
-    <div className="flex flex-col gap-2 ">
-      <p className="text-white">Languages:</p>
-      <ul>
-        <li className="text-white">JavaScript</li>
-        <li className="text-white">C++</li>
-        <li className="text-white">C#</li>
-        <li className="text-white">Dart</li>
-        <li className="text-white">Solidity</li>
-      </ul>
-      <p className="text-white">Frontend:</p>
-      <ul>
-        <li className="text-white">HTML</li>
-        <li className="text-white">Tailwind CSS</li>
-        <li className="text-white">React</li>
-        <li className="text-white">Flutter</li>
-        <li className="text-white">Next.js</li>
-        <li className="text-white">RazorPay</li>
-      </ul>
-      <p className="text-white">Backend:</p>
-      <ul>
-        <li className="text-white">Node.js</li>
-        <li className="text-white">Express</li>
-        <li className="text-white">MongoDB</li>
-        <li className="text-white">SST</li>
-        <li className="text-white">AWS</li>
-        <li className="text-white">NEXT.js</li>
-        <li className="text-white">HardHat</li>
-        <li className="text-white">RazorPay</li>
-      </ul>
-      <p className="text-white">Technologies:</p>
-      <ul>
-        <li className="text-white">Figma</li>
-        <li className="text-white">GitHub</li>
-        <li className="text-white">VS Code</li>
-      </ul>
+    <div className="container mx-auto p-8 bg-gray-800 text-commandResult flex flex-wrap gap-10">
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Languages:</h2>
+        <ul className="list-disc pl-4">
+          <li>JavaScript</li>
+          <li>C++</li>
+          <li>C#</li>
+          <li>Dart</li>
+          <li>Solidity</li>
+        </ul>
+      </div>
+
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Frontend:</h2>
+        <ul className="list-disc pl-4">
+          <li>HTML</li>
+          <li>Tailwind CSS</li>
+          <li>React</li>
+          <li>Flutter</li>
+          <li>Next.js</li>
+          <li>RazorPay</li>
+        </ul>
+      </div>
+
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Backend:</h2>
+        <ul className="list-disc pl-4">
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>MongoDB</li>
+          <li>SST</li>
+          <li>AWS</li>
+          <li>NEXT.js</li>
+          <li>HardHat</li>
+          <li>RazorPay</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Technologies:</h2>
+        <ul className="list-disc pl-4">
+          <li>Figma</li>
+          <li>GitHub</li>
+          <li>VS Code</li>
+        </ul>
+      </div>
     </div>
   );
 };
