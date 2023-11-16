@@ -82,61 +82,43 @@ const HelpCommand = () => {
 
 const AboutCommand = () => {
   return (
-    <div className="flex flex-col gap-2 ">
-      <span className="text-white flex gap-2">
-        <pre>-{arrow}</pre>
-        <p className="text-commandResult">
-          Hello World, My Name is Harsh Keshri.
+    <div className="flex flex-col gap-2 text-commandResult ">
+      <span>
+        <p>
+          👋 Hello World! I'm Harsh Keshri, a passionate Full Stack Developer
+          with expertise in:
         </p>
       </span>
-      <span className="text-white flex gap-2">
-        <pre>-{arrow}</pre>
-        <p className="text-commandResult">I am a Full Stack Developer.</p>
-      </span>
-      <span className="text-white flex gap-2">
-        <pre>-{arrow}</pre>
-        <p className="text-commandResult">
-          I work with technologies like React, Next Js, Tailwind CSS, Node Js,
-          and more.
+      <span className="mt-3">
+        <p>
+          I embarked on my coding journey in the 7th standard, initially with
+          Java, but truly delved into it in December 2021. Since then, I've:
         </p>
       </span>
-      <span className="text-white flex gap-2">
-        <pre>-{arrow}</pre>
-        <p className="text-commandResult">
-          I'm always excited to learn new things and implement them in my work.
-        </p>
-      </span>
-      <span className="text-white flex gap-2">
-        <pre>-{arrow}</pre>
-        <p className="text-commandResult">
-          I started coding in my 7th Standard, primarily using Java.
-        </p>
-      </span>
-      <span className="text-white flex gap-2">
-        <pre>-{arrow}</pre>
-        <p className="text-commandResult">
-          I dived into coding in December 2021.
-        </p>
-      </span>
-      <span className="text-white flex gap-2">
-        <pre>-{arrow}</pre>
-        <p className="text-commandResult">
-          I began with Web Development and learned Flutter to enter the app
-          development field.
-        </p>
-      </span>
-      <span className="text-white flex gap-2">
-        <pre>-{arrow}</pre>
-        <p className="text-commandResult">
-          I've also explored the Game Development field using C#, primarily for
-          a Hackathon.
-        </p>
-      </span>
-      <span className="text-white flex gap-2">
-        <pre>-{arrow}</pre>
-        <p className="text-commandResult">
-          I have some basic knowledge of Blockchain technologies, including
-          Solidity, Smart Contracts, and Ethereum.
+      <ul className="list-disc list-outside pl-4">
+        <li>
+          <p>🚀 Explored Web Development as my starting point.</p>
+        </li>
+        <li>
+          <p>📱 Ventured into App Development with Flutter.</p>
+        </li>
+        <li>
+          <p>🕹️ Dabbled in Game Development (C#) for a thrilling Hackathon.</p>
+        </li>
+        <li>
+          <p>
+            🔗 Acquired basic knowledge in Blockchain (Solidity, Smart
+            Contracts, Ethereum).
+          </p>
+        </li>
+        <li>
+          <p>🚀 Recently learned GoLang to broaden my skill set.</p>
+        </li>
+      </ul>
+      <span className="mt-3 mb-1">
+        <p>
+          I'm always eager to embrace new technologies and integrate them into
+          my projects. Let's create something amazing together! 💻✨
         </p>
       </span>
     </div>
@@ -145,63 +127,76 @@ const AboutCommand = () => {
 
 const ContactCommand = () => {
   return (
-    <div className="flex flex-col gap-2 ">
-      <p className="text-white">
-        Email:
-        <a
-          className="text-white"
-          href="mailto:harshkeshri1234567@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          harshkeshri1234567@gmailcom
-        </a>
-      </p>
-      <p className="text-white">
-        Github:
-        <a
-          className="text-white"
-          href="https://github.com/airbornharsh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @airbornharsh
-        </a>
-      </p>
-      <p className="text-white">
-        LinkedIn:
-        <a
-          className="text-white"
-          href="https://linkedin.com/in/airbornharsh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @airbornharsh
-        </a>
-      </p>
-      <p className="text-white">
-        X:
-        <a
-          className="text-white"
-          href="https://x.com/airbornharsh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @airbornharsh
-        </a>
-      </p>
-      <p className="text-white">
-        Instagram:
-        <a
-          className="text-white"
-          href="https://instagram.com/airbornharsh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @airbornharsh
-        </a>
-      </p>
-    </div>
+    <ul className="flex flex-col gap-2 list-disc list-outside pl-4 text-commandResult font-bold">
+      <li className="mt-1">
+        <p>
+          Email:{" "}
+          <a
+            href="mailto:harshkeshri1234567@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-extralight"
+          >
+            harshkeshri1234567@gmailcom
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          Github:{" "}
+          <a
+            href="https://github.com/airbornharsh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-extralight"
+          >
+            @airbornharsh
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          LinkedIn:{" "}
+          <a
+            href="https://linkedin.com/in/airbornharsh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-extralight"
+          >
+            @airbornharsh
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          X:{" "}
+          <a
+            href="https://x.com/airbornharsh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-extralight"
+          >
+            @airbornharsh
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          Instagram:{" "}
+          <a
+            href="https://instagram.com/airbornharsh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-extralight"
+          >
+            @airbornharsh
+          </a>
+        </p>
+      </li>
+      <li className="list-none mt-1 font-normal">
+        👆 Click on any to contact me!{" "}
+      </li>
+    </ul>
   );
 };
 
