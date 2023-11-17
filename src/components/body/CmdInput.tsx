@@ -25,7 +25,10 @@ const CmdInput = ({ inputRef, scrollFn }: CmdInputProps) => {
   const onCmdSubmit = () => {
     try {
       Ctx.clearSuggestions();
-      if (cmd.trim().toLocaleLowerCase() == "clear") {
+      if (
+        cmd.trim().toLocaleLowerCase() == "clear" ||
+        cmd.trim().toLocaleLowerCase() == "cls"
+      ) {
         Ctx.history.clearStoredLi();
         return;
       } else if (cmd.trim().toLowerCase() == "exit") {

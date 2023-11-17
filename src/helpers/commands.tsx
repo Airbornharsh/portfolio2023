@@ -31,7 +31,7 @@ const CheckCommandAndExecute = (command: string) => {
     return ExperienceCommand();
   } else {
     return (
-      <li>
+      <li className="flex flex-col gap-2 my-2">
         <p className="text-error">
           The term '{command}' is not recognized as the name of a cmdlet,
           function, script file, or operable program.{" "}
