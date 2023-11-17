@@ -35,7 +35,7 @@ const Home = () => {
       Ctx.setIsNew(false);
     } else if (cmd === "n") {
       alert("You are Redirecting to my Visual portfolio");
-      window.location.href = "https://harshkeshri.com";
+      window.location.href = "https://visual.harshkeshri.com";
     }
   };
 

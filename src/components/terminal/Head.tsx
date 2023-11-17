@@ -36,7 +36,7 @@ const Head = () => {
         />
       </ul>
       <Link
-        to={"https://harshkeshri.com"}
+        to={"https://visual.harshkeshri.com"}
         hrefLang="_blank"
         className="text-commandResult font-semibold text-sm"
       >
