@@ -64,60 +64,74 @@ const Home = () => {
           </div>
         </div>
       ) : (
-        <div
-          className="bg-color1  rounded-2xl shadow-sm shadow-color3 terminal-Container border-[0.1rem] border-color3 fixed "
-          style={{
-            maxWidth: Ctx.maximized ? "100%" : "60rem",
-            maxHeight: Ctx.maximized ? "100%" : "40rem",
-            transition: "all 0.2s ease-in-out",
-            width: !Ctx.closed ? "96vw" : "3rem",
-            height: !Ctx.closed ? "96vh" : "3rem",
-            bottom: Ctx.closed ? "1rem" : "unset",
-            top: Ctx.closed
-              ? "unset"
-              : Ctx.maximized
-              ? `50%`
-              : `calc(${position.y}px + 50%)`,
-            transform: Ctx.closed ? "translateX(-50%)" : "translate(-50%,-50%)",
-            zIndex: Ctx.closed ? 100 : 0,
-            left: Ctx.closed
-              ? "50%"
-              : Ctx.maximized
-              ? "50%"
-              : `calc(${position.x}px + 50%)`,
-            // top: position.y,
-            cursor: isDragging ? "grabbing" : "grab",
-          }}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-        >
-          {Ctx.closed ? (
+        <>
+          {Ctx.closed && (
             <div
-              className="w-full h-full flex justify-center items-center"
-              onClick={() => {
-                Ctx.handleClose(false);
+              className="text-color3 absolute bottom-[5rem] left-[50%]"
+              style={{
+                transform: "translateX(-50%)",
               }}
             >
-              <img
-                src="/jpeg/airbornharsh.jpeg"
-                alt="photo"
-                className="h-8 w-8"
-              />
-            </div>
-          ) : (
-            <div
-              className="w-full h-full flex flex-col"
-              onClick={() => {
-                // if inputRef.current.
-                inputRef.current?.focus();
-              }}
-            >
-              <Head />
-              <Body inputRef={inputRef} />
+              <p className="font-bold text-3xl shadow-2xl">Click Me</p>
             </div>
           )}
-        </div>
+          <div
+            className="bg-color1  rounded-2xl shadow-sm shadow-color3 terminal-Container border-[0.1rem] border-color3 fixed "
+            style={{
+              maxWidth: Ctx.maximized ? "100%" : "60rem",
+              maxHeight: Ctx.maximized ? "100%" : "40rem",
+              transition: "all 0.2s ease-in-out",
+              width: !Ctx.closed ? "96vw" : "3rem",
+              height: !Ctx.closed ? "96vh" : "3rem",
+              bottom: Ctx.closed ? "1rem" : "unset",
+              top: Ctx.closed
+                ? "unset"
+                : Ctx.maximized
+                ? `50%`
+                : `calc(${position.y}px + 50%)`,
+              transform: Ctx.closed
+                ? "translateX(-50%)"
+                : "translate(-50%,-50%)",
+              zIndex: Ctx.closed ? 100 : 0,
+              left: Ctx.closed
+                ? "50%"
+                : Ctx.maximized
+                ? "50%"
+                : `calc(${position.x}px + 50%)`,
+              // top: position.y,
+              cursor: isDragging ? "grabbing" : "grab",
+            }}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+          >
+            {Ctx.closed ? (
+              <div
+                className="w-full h-full flex justify-center items-center"
+                onClick={() => {
+                  Ctx.handleClose(false);
+                }}
+              >
+                <img
+                  src="/jpeg/airbornharsh.jpeg"
+                  alt="photo"
+                  className="h-8 w-8"
+                />
+              </div>
+            ) : (
+              <div
+                className="w-full h-full flex flex-col"
+                onClick={() => {
+                  // if inputRef.current.
+                  inputRef.current?.focus();
+                }}
+              >
+                <Head />
+                <Body inputRef={inputRef} />
+              </div>
+            )}
+          </div>
+        </>
       )}
     </div>
   );
