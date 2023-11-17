@@ -71,6 +71,7 @@ const CmdInput = ({ inputRef, scrollFn }: CmdInputProps) => {
           </div>
         </li>,
       ]);
+      scrollFn();
     } catch (e) {
       console.log(e);
     } finally {
@@ -134,7 +135,6 @@ const CmdInput = ({ inputRef, scrollFn }: CmdInputProps) => {
           onChange={(e) => {
             setCmd(e.target.value.toLowerCase());
             BreakCmd(e.target.value.toLowerCase());
-            scrollFn();
           }}
         />
       </form>

@@ -18,7 +18,8 @@ const Body = ({ inputRef }: BodyProps) => {
   });
 
   const scrollFn = () => {
-    window.innerWidth > 768 &&
+    console.log(window.innerWidth);
+    if (window.innerWidth > 768)
       scrollRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
