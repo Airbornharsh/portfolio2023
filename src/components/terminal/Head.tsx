@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import Context from "../../Context/Context";
+import { Link } from "react-router-dom";
 
 const Head = () => {
   const Ctx = useContext(Context);
@@ -19,7 +20,7 @@ const Head = () => {
   };
 
   return (
-    <div className="bg-color2 h-10 flex items-center pl-3 rounded-t-3xl">
+    <div className="bg-color2 h-10 flex items-center px-3 rounded-t-3xl justify-between">
       <ul className="flex gap-2 ">
         <li
           className="bg-error h-4 w-4 rounded-full cursor-pointer"
@@ -34,6 +35,13 @@ const Head = () => {
           onClick={handleMaximizeToggle}
         />
       </ul>
+      <Link
+        to={"https://harshkeshri.com"}
+        hrefLang="_blank"
+        className="text-commandResult font-semibold text-sm"
+      >
+        Go to Website
+      </Link>
     </div>
   );
 };
