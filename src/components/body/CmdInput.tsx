@@ -29,7 +29,7 @@ const CmdInput = ({ inputRef, scrollFn }: CmdInputProps) => {
         Ctx.history.clearStoredLi();
         return;
       } else if (cmd.trim().toLowerCase() == "exit") {
-        Ctx.handleClose(true);
+        Ctx.setIsNew(true);
         return;
       }
 

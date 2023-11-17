@@ -12,7 +12,7 @@ const Context = React.createContext({
     },
   },
   maximized: false,
-  handleMaximize: (data: boolean) => {
+  handleMaximizeToggle: (data: boolean) => {
     return data;
   },
   closed: false,

@@ -20,7 +20,7 @@ const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
     return data;
   };
 
-  const setMaximizedFn = (data: boolean) => {
+  const setToggleFn = (data: boolean) => {
     setMaximized(data);
     return data;
   };
@@ -67,7 +67,7 @@ const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
           setLoader: setLoaderFn,
         },
         maximized: maximized,
-        handleMaximize: setMaximizedFn,
+        handleMaximizeToggle: setToggleFn,
         closed: closed,
         handleClose: setClosedFn,
         history: {

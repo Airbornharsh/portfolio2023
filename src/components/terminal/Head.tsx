@@ -3,19 +3,19 @@ import Context from "../../Context/Context";
 
 const Head = () => {
   const Ctx = useContext(Context);
-  const handleMinimize = () => {
+  const handleCLose = () => {
     console.log("Minimize");
-    Ctx.handleMaximize(false);
-  };
-
-  const handleMaximize = () => {
-    console.log("Maximize");
-    Ctx.handleMaximize(true);
-  };
-
-  const handleClose = () => {
-    console.log("Close");
     Ctx.handleClose(true);
+  };
+
+  const handleMaximizeToggle = () => {
+    console.log("Maximize");
+    Ctx.handleMaximizeToggle(!Ctx.maximized);
+  };
+
+  const handleIsNew = () => {
+    console.log("Close");
+    Ctx.setIsNew(true);
   };
 
   return (
@@ -23,15 +23,15 @@ const Head = () => {
       <ul className="flex gap-2 ">
         <li
           className="bg-error h-4 w-4 rounded-full cursor-pointer"
-          onClick={handleClose}
+          onClick={handleIsNew}
         />
         <li
           className="bg-warning h-4 w-4 rounded-full cursor-pointer"
-          onClick={handleMinimize}
+          onClick={handleCLose}
         />
         <li
           className="bg-success h-4 w-4 rounded-full cursor-pointer"
-          onClick={handleMaximize}
+          onClick={handleMaximizeToggle}
         />
       </ul>
     </div>
