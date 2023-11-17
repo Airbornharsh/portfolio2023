@@ -3,11 +3,17 @@ import Context from "./Context";
 import { commands } from "../assets/data/command";
 
 const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
+  const [isNew, setIsNew] = useState(true);
   const [loader, setLoader] = useState(false);
   const [maximized, setMaximized] = useState(false);
   const [closed, setClosed] = useState(false);
   const [storedLi, setStoredLi] = useState<JSX.Element[]>([]);
   const [suggestions, setSuggestions] = useState<string[]>([]);
+
+  const setIsNewFn = (data: boolean) => {
+    setIsNew(data);
+    return data;
+  }
 
   const setLoaderFn = (data: boolean) => {
     setLoader(data);
@@ -54,6 +60,8 @@ const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
   return (
     <Context.Provider
       value={{
+        isNew: isNew,
+        setIsNew: setIsNewFn,
         util: {
           loader: loader,
           setLoader: setLoaderFn,

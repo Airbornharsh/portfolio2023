@@ -1,6 +1,10 @@
 import React from "react";
 
 const Context = React.createContext({
+  isNew: true,
+  setIsNew: (data: boolean) => {
+    return data;
+  },
   util: {
     loader: false,
     setLoader: (data: boolean) => {

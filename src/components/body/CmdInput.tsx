@@ -1,22 +1,20 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { CheckCommand, CheckCommandAndExecute } from "../../helpers/commands";
 import Context from "../../Context/Context";
 
 interface CmdInputProps {
   inputRef: React.RefObject<HTMLInputElement>;
-  isNew: boolean;
-  setIsNew: React.Dispatch<React.SetStateAction<boolean>>;
   scrollFn: () => void;
 }
 
-const CmdInput = ({ inputRef, isNew, setIsNew, scrollFn }: CmdInputProps) => {
+const CmdInput = ({ inputRef, scrollFn }: CmdInputProps) => {
   const Ctx = useContext(Context);
   const [cmd, setCmd] = useState<string>("");
   const [cmdList, setCmdList] = useState<string[]>([]);
 
-  useEffect(() => {
-    setIsNew(true);
-  }, [inputRef, setIsNew]);
+  // useEffect(() => {
+  //   setIsNew(true);
+  // }, [inputRef, setIsNew]);
 
   const BreakCmd = (tempCmd: string) => {
     const tempCmdList = tempCmd.split(" ");
@@ -24,21 +22,8 @@ const CmdInput = ({ inputRef, isNew, setIsNew, scrollFn }: CmdInputProps) => {
     Ctx.setSuggestions(tempCmdList[tempCmdList.length - 1]);
   };
 
-  const onNewSubmit = () => {
-    if (cmd == "y") {
-      setIsNew(false);
-    } else if (cmd == "n") {
-      alert("You are Redirecting to my Visual portfolio");
-      window.location.href = "https://harshkeshri.com";
-    }
-  };
-
   const onCmdSubmit = () => {
     try {
-      if (isNew) {
-        onNewSubmit();
-        return;
-      }
       Ctx.clearSuggestions();
       if (cmd.trim().toLocaleLowerCase() == "clear") {
         Ctx.history.clearStoredLi();
@@ -97,7 +82,7 @@ const CmdInput = ({ inputRef, isNew, setIsNew, scrollFn }: CmdInputProps) => {
       <p className="text-grey">@</p>
       <p className="text-success">airbornharsh</p>
       <p className="text-grey ml-2 mr-2">$</p>
-      {isNew ||
+      {Ctx.isNew ||
         cmdList.map((tempCmd, index) => {
           const checkedCmd = CheckCommand(tempCmd);
           return (
@@ -113,7 +98,7 @@ const CmdInput = ({ inputRef, isNew, setIsNew, scrollFn }: CmdInputProps) => {
             </p>
           );
         })}
-      {isNew && (
+      {/* {isNew && (
         <p
           className="font-medium"
           style={{
@@ -125,7 +110,7 @@ const CmdInput = ({ inputRef, isNew, setIsNew, scrollFn }: CmdInputProps) => {
         >
           {cmd}
         </p>
-      )}
+      )} */}
       <span className="blinking-cursor">|</span>
       <form
         onSubmit={(e) => {

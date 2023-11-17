@@ -1,15 +1,15 @@
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import CmdInput from "../body/CmdInput";
 import CmdOutput from "../body/CmdOutput";
 import CmdSuggestion from "../body/CmdSuggestion";
+import Context from "../../Context/Context";
 
 interface BodyProps {
   inputRef: React.RefObject<HTMLInputElement>;
-  isNew: boolean;
-  setIsNew: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Body = ({ inputRef, isNew, setIsNew }: BodyProps) => {
+const Body = ({ inputRef }: BodyProps) => {
+  const Ctx = useContext(Context);
   const scrollRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -23,21 +23,16 @@ const Body = ({ inputRef, isNew, setIsNew }: BodyProps) => {
 
   return (
     <div className="w-full h-full px-4 pb-4 text-white overflow-auto overflow-y-auto scroll-bar">
-      {isNew || <p className="font-medium text-sm">Type "help" for help</p>}
+      {Ctx.isNew || <p className="font-medium text-sm">Type "help" for help</p>}
       <ul className="flex flex-col items-start">
         <CmdOutput />
-        {isNew && (
+        {/* {isNew && (
           <p className="font-medium text-white">
             Do you know about terminal? y/n&#41;
           </p>
-        )}
-        <CmdInput
-          inputRef={inputRef}
-          isNew={isNew}
-          setIsNew={setIsNew}
-          scrollFn={scrollFn}
-        />
-        {isNew || <CmdSuggestion />}
+        )} */}
+        <CmdInput inputRef={inputRef} scrollFn={scrollFn} />
+        {Ctx.isNew || <CmdSuggestion />}
         <span ref={scrollRef}></span>
       </ul>
     </div>
