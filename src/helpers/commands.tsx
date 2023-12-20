@@ -210,7 +210,7 @@ const ProjectsCommand = () => {
     <ul className="flex flex-col gap-2 mt-6">
       <h2 className="text-2xl font-bold mb-4">Projects:</h2>
 
-      {Projects.map((project, index: number) => (
+      {Projects.reverse().map((project, index: number) => (
         <li
           className="p-6 rounded-lg shadow-md mb-6"
           key={"project" + index + project.name}

@@ -1,5 +1,43 @@
 const Projects = [
   {
+    name: "Twitter Clone",
+    description:
+      "A clone of Twitter with many features. It includes frontend and backend both",
+    id: "twitter-clone",
+    githubLink: "https://github.com/Airbornharsh/twitter-clone-frontend",
+    type: "Website",
+    isWebsite: true,
+    webLink: "https://x.harshkeshri.com",
+    technologies: [
+      { name: "React" },
+      { name: "Typescript" },
+      { name: "Tailwind CSS" },
+      { name: "Express" },
+      { name: "MongoDb" },
+      { name: "NodeJs" },
+    ],
+  },
+  {
+    name: "Ecommerce-Backend",
+    description: "Ecommerce Backend",
+    id: "ecommerce-backend",
+    githubLink: "https://github.com/Airbornharsh/ecommerce-backend-go",
+    type: "Backend",
+    isWebsite: false,
+    webLink: "",
+    technologies: [{ name: "Go" }, { name: "PostgreSql" }, { name: "Gin" }],
+  },
+  {
+    name: "Holio-Backend",
+    description: "Hotel Management System",
+    id: "holio-backend",
+    githubLink: "https://github.com/Airbornharsh/holio-go",
+    type: "Backend",
+    isWebsite: false,
+    webLink: "",
+    technologies: [{ name: "Go" }, { name: "PostgreSql" }, { name: "Gin" }],
+  },
+  {
     name: "Stums (College Hackathon Project for Tech Fest)",
     description:
       "Students and Faculty manage the Student Profile and student can pay mess bill,fee payment,add leave application and more",
