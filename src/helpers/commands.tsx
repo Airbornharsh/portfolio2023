@@ -255,6 +255,8 @@ const SkillsCommand = () => {
           <h2 className="text-xl font-bold mb-4">Languages:</h2>
           <ul className="list-disc pl-4">
             <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>GoLang</li>
             <li>C++</li>
             <li>C#</li>
             <li>Dart</li>
