@@ -1,5 +1,6 @@
 import CommandData from "../assets/data/commands.json";
 import Projects from "../assets/data/projects";
+import CommandDetails from "../assets/data/commands.json";
 
 const arrow = ">";
 
@@ -15,7 +16,7 @@ const CheckCommand = (command: string) => {
 
 const CheckCommandAndExecute = (command: string) => {
   command = command.trim().toLowerCase();
-  if (command === "help") {
+  if (command === "help" || command === "ls") {
     return HelpCommand();
   } else if (command === "about") {
     return AboutCommand();
@@ -47,35 +48,43 @@ const HelpCommand = () => {
     <div className="flex gap-2 flex-col ">
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-commandResult">help</p>
+        <p className="text-commandResult">help - </p>
+        <p>{CommandDetails["help"]}</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-commandResult">about</p>
+        <p className="text-commandResult">about - </p>
+        <p>{CommandDetails["about"]}</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-commandResult">contact</p>
+        <p className="text-commandResult">contact - </p>
+        <p>{CommandDetails["contact"]}</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-commandResult">projects</p>
+        <p className="text-commandResult">projects - </p>
+        <p>{CommandDetails["projects"]}</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-commandResult">skills</p>
+        <p className="text-commandResult">skills - </p>
+        <p>{CommandDetails["skills"]}</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-commandResult">education</p>
+        <p className="text-commandResult">education - </p>
+        <p>{CommandDetails["education"]}</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-commandResult">experience</p>
+        <p className="text-commandResult">experience - </p>
+        <p>{CommandDetails["experience"]}</p>
       </span>
       <span className="text-white flex gap-2">
         <p>-{arrow}</p>
-        <p className="text-commandResult">clear</p>
+        <p className="text-commandResult">clear - </p>
+        <p>{CommandDetails["clear"]}</p>
       </span>
     </div>
   );

@@ -1,4 +1,5 @@
 const commands = [
+  "ls",
   "help",
   "about",
   "contact",

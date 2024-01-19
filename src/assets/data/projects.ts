@@ -1,5 +1,24 @@
 const Projects = [
   {
+    name: "Chess",
+    description:
+      "Players can play chess with each other using the link or code",
+    id: "chess",
+    githubLink: "https://github.com/Airbornharsh/chess",
+    type: "Website",
+    isWebsite: true,
+    webLink: "https://chess.harshkeshri.com",
+    technologies: [
+      { name: "React" },
+      { name: "Typescript" },
+      { name: "Tailwind CSS" },
+      { name: "Express" },
+      { name: "MongoDb" },
+      { name: "NodeJs" },
+      { name: "Firebase" },
+    ],
+  },
+  {
     name: "Twitter Clone",
     description:
       "A clone of Twitter with many features. It includes frontend and backend both",
