@@ -1,5 +1,36 @@
 const Projects = [
   {
+    name: "AWS Services",
+    description: "Made aws services from scratch like S3, DynamoDB, Lambda",
+    id: "aws-services",
+    githubLink: "https://github.com/Airbornharsh/aws-services",
+    type: "Website",
+    isWebsite: false,
+    technologies: [
+      { name: "Typescript" },
+      { name: "Express" },
+      { name: "NodeJs" },
+    ],
+  },
+  {
+    name: "Code Compiler",
+    description:
+      "this is a code compiler where you can compile your code and run it. It supports many languages like C, C++, Javascript, Java, GoLang, Python",
+    id: "code-coompiler",
+    githubLink: "https://github.com/Airbornharsh/code-compiler",
+    type: "Website",
+    isWebsite: true,
+    webLink: "https://code-compiler.harshkeshri.com",
+    technologies: [
+      { name: "React" },
+      { name: "Vite" },
+      { name: "Typescript" },
+      { name: "Tailwind CSS" },
+      { name: "Express" },
+      { name: "NodeJs" },
+    ],
+  },
+  {
     name: "Chess",
     description:
       "Players can play chess with each other using the link or code",
