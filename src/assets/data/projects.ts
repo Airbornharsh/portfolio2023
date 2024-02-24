@@ -1,8 +1,8 @@
 const Projects = [
   {
-    name: "AWS Services",
+    name: "H Serverless",
     description: "Anyone can run the serverless code",
-    id: "aws-services",
+    id: "h-serverless",
     githubLink: "https://github.com/Airbornharsh/h-serverless",
     type: "Website",
     isWebsite: false,
