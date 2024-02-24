@@ -1,6 +1,21 @@
 const Projects = [
   {
     name: "AWS Services",
+    description: "Anyone can run the serverless code",
+    id: "aws-services",
+    githubLink: "https://github.com/Airbornharsh/h-serverless",
+    type: "Website",
+    isWebsite: false,
+    technologies: [
+      { name: "Typescript" },
+      { name: "Express" },
+      { name: "NodeJs" },
+      { name: "Docker" },
+      { name: "Docker Compose" },
+    ],
+  },
+  {
+    name: "AWS Services",
     description: "Made aws services from scratch like S3, DynamoDB, Lambda",
     id: "aws-services",
     githubLink: "https://github.com/Airbornharsh/aws-services",
@@ -10,6 +25,7 @@ const Projects = [
       { name: "Typescript" },
       { name: "Express" },
       { name: "NodeJs" },
+      { name: "Docker" },
     ],
   },
   {
