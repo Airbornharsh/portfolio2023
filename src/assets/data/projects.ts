@@ -1,5 +1,22 @@
 const Projects = [
   {
+    name: "Github CodeSpace",
+    description:
+      "Anyone can run the code from github using this website and can edit it also",
+    id: "github-codespace",
+    githubLink: "https://github.com/Airbornharsh/github-codespace",
+    type: "Website",
+    isWebsite: false,
+    technologies: [
+      { name: "Go Lang" },
+      { name: "Gin" },
+      { name: "Docker" },
+      { name: "WebSockets" },
+      { name: "Typescript" },
+      { name: "Express" },
+    ],
+  },
+  {
     name: "H Serverless",
     description: "Anyone can run the serverless code",
     id: "h-serverless",
