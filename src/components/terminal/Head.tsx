@@ -2,7 +2,13 @@ import { useContext } from "react";
 import Context from "../../Context/Context";
 import { Link } from "react-router-dom";
 
-const Head = () => {
+interface HeadProps {
+  onMouseDown: (e: { clientX: number; clientY: number }) => void;
+  onMouseMove: (e: { clientX: number; clientY: number }) => void;
+  onMouseUp: () => void;
+}
+
+const Head: React.FC<HeadProps> = ({ onMouseDown, onMouseMove, onMouseUp }) => {
   const Ctx = useContext(Context);
   const handleCLose = () => {
     console.log("Minimize");
@@ -20,7 +26,12 @@ const Head = () => {
   };
 
   return (
-    <div className="bg-color2 h-10 flex items-center px-3 rounded-t-3xl justify-between">
+    <div
+      className="bg-color2 h-10 flex items-center px-3 rounded-t-3xl justify-between"
+      onMouseDown={onMouseDown}
+      onMouseMove={onMouseMove}
+      onMouseUp={onMouseUp}
+    >
       <ul className="flex gap-2 ">
         <li
           className="bg-error h-4 w-4 rounded-full cursor-pointer"

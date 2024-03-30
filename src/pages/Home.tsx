@@ -80,7 +80,6 @@ const Home = () => {
             style={{
               maxWidth: Ctx.maximized ? "100%" : "60rem",
               maxHeight: Ctx.maximized ? "100%" : "40rem",
-              transition: "all 0.2s ease-in-out",
               width: !Ctx.closed ? "96vw" : "3rem",
               height: !Ctx.closed ? "96vh" : "3rem",
               bottom: Ctx.closed ? "1rem" : "unset",
@@ -101,9 +100,6 @@ const Home = () => {
               // top: position.y,
               cursor: isDragging ? "grabbing" : "grab",
             }}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
           >
             {Ctx.closed ? (
               <div
@@ -126,7 +122,11 @@ const Home = () => {
                   inputRef.current?.focus();
                 }}
               >
-                <Head />
+                <Head
+                  onMouseDown={handleMouseDown}
+                  onMouseMove={handleMouseMove}
+                  onMouseUp={handleMouseUp}
+                />
                 <Body inputRef={inputRef} />
               </div>
             )}
