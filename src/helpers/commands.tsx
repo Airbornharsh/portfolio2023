@@ -918,20 +918,6 @@ const ExperienceCommand = () => {
             </li>
           </ul>
         </div>
-        <div className="mb-4">
-          <h4 className="font-semibold mb-2">Key Achievements:</h4>
-          <ul className="list-disc pl-4 space-y-1">
-            <li>
-              ✓ Reduced system response time by 40% through optimized database
-              queries
-            </li>
-            <li>
-              ✓ Implemented multi-agent AI system handling 10K+ daily trading
-              decisions
-            </li>
-            <li>✓ Achieved 99.9% uptime for critical trading infrastructure</li>
-          </ul>
-        </div>
         <div>
           <h4 className="font-semibold mb-2">Technologies:</h4>
           <div className="flex flex-wrap gap-2">
@@ -993,16 +979,6 @@ const ExperienceCommand = () => {
             </li>
           </ul>
         </div>
-        <div className="mb-4">
-          <h4 className="font-semibold mb-2">Key Achievements:</h4>
-          <ul className="list-disc pl-4 space-y-1">
-            <li>✓ Delivered 5+ client projects within tight deadlines</li>
-            <li>
-              ✓ Improved client website performance by 60% through optimization
-            </li>
-            <li>✓ Reduced development time by 30% using reusable components</li>
-          </ul>
-        </div>
         <div>
           <h4 className="font-semibold mb-2">Technologies:</h4>
           <div className="flex flex-wrap gap-2">
@@ -1061,21 +1037,6 @@ const ExperienceCommand = () => {
             </li>
           </ul>
         </div>
-        <div className="mb-4">
-          <h4 className="font-semibold mb-2">Key Achievements:</h4>
-          <ul className="list-disc pl-4 space-y-1">
-            <li>
-              ✓ Reduced infrastructure costs by 35% through serverless
-              optimization
-            </li>
-            <li>
-              ✓ Improved application load time by 50% through caching strategies
-            </li>
-            <li>
-              ✓ Implemented CI/CD pipeline reducing deployment time by 70%
-            </li>
-          </ul>
-        </div>
         <div>
           <h4 className="font-semibold mb-2">Technologies:</h4>
           <div className="flex flex-wrap gap-2">
@@ -1129,16 +1090,6 @@ const ExperienceCommand = () => {
               Optimized API response times and database queries, improving
               backend performance
             </li>
-          </ul>
-        </div>
-        <div className="mb-4">
-          <h4 className="font-semibold mb-2">Key Achievements:</h4>
-          <ul className="list-disc pl-4 space-y-1">
-            <li>
-              ✓ Improved API response time by 45% through query optimization
-            </li>
-            <li>✓ Created 15+ reusable components reducing development time</li>
-            <li>✓ Successfully deployed 3 production applications</li>
           </ul>
         </div>
         <div>
