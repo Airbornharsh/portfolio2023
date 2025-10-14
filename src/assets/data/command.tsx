@@ -7,7 +7,10 @@ const commands = [
   "skills",
   "education",
   "experience",
+  "resume",
   "clear",
+  "cls",
+  "exit",
 ];
 
 export { commands };

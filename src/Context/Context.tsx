@@ -1,6 +1,29 @@
 import React from "react";
 
-const Context = React.createContext({
+interface ContextType {
+  isNew: boolean;
+  setIsNew: (data: boolean) => boolean;
+  util: {
+    loader: boolean;
+    setLoader: (data: boolean) => boolean;
+  };
+  maximized: boolean;
+  handleMaximizeToggle: (data: boolean) => boolean;
+  closed: boolean;
+  handleClose: (data: boolean) => boolean;
+  history: {
+    storedLi: Array<JSX.Element>;
+    addStoredLi: (data: JSX.Element[]) => JSX.Element[];
+    clearStoredLi: () => void;
+  };
+  suggestions: string[];
+  setSuggestions: (data: string) => string;
+  clearSuggestions: () => void;
+  selectedSuggestionIndex: number;
+  setSelectedSuggestionIndex: (index: number) => number;
+}
+
+const Context = React.createContext<ContextType>({
   isNew: true,
   setIsNew: (data: boolean) => {
     return data;
@@ -34,6 +57,10 @@ const Context = React.createContext({
   },
   clearSuggestions: () => {
     return;
+  },
+  selectedSuggestionIndex: -1 as number,
+  setSelectedSuggestionIndex: (index: number) => {
+    return index;
   },
 });
 

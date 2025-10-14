@@ -3,17 +3,19 @@ import Context from "./Context";
 import { commands } from "../assets/data/command";
 
 const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
-  const [isNew, setIsNew] = useState(true);
+  const [isNew, setIsNew] = useState(false);
   const [loader, setLoader] = useState(false);
   const [maximized, setMaximized] = useState(false);
   const [closed, setClosed] = useState(false);
   const [storedLi, setStoredLi] = useState<JSX.Element[]>([]);
   const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [selectedSuggestionIndex, setSelectedSuggestionIndex] =
+    useState<number>(-1);
 
   const setIsNewFn = (data: boolean) => {
     setIsNew(data);
     return data;
-  }
+  };
 
   const setLoaderFn = (data: boolean) => {
     setLoader(data);
@@ -54,7 +56,13 @@ const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
 
   const clearSuggestionsFn = () => {
     setSuggestions([]);
+    setSelectedSuggestionIndex(-1);
     return;
+  };
+
+  const setSelectedSuggestionIndexFn = (index: number) => {
+    setSelectedSuggestionIndex(index);
+    return index;
   };
 
   return (
@@ -78,6 +86,8 @@ const ContextProvider = (props: React.PropsWithChildren<unknown>) => {
         suggestions: suggestions,
         setSuggestions: setSuggestionsFn,
         clearSuggestions: clearSuggestionsFn,
+        selectedSuggestionIndex: selectedSuggestionIndex,
+        setSelectedSuggestionIndex: setSelectedSuggestionIndexFn, // Arrow navigation support
       }}
     >
       {props.children}
