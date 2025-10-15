@@ -2,7 +2,7 @@ const Projects = [
   {
     name: "A2Rok (Tunneling Service)",
     description:
-      "A self-hosted tunneling platform that creates secure tunnels to expose local development servers to the internet. Provides an alternative to ngrok with real-time monitoring dashboard and WebSocket connections for seamless development workflow.",
+      "A self-hosted tunneling platform that creates secure tunnels to expose local development servers to the internet. Features multiple protocol support for HTTP/HTTPS/WS/WSS connections, providing an alternative to ngrok with real-time monitoring dashboard and WebSocket connections for seamless development workflow.",
     id: "a2rok",
     githubLink: "https://github.com/Airbornharsh/A2Rok",
     type: "Infrastructure",
