@@ -1,5 +1,24 @@
 const Projects = [
   {
+    name: "HIT",
+    description:
+      "A modern alternative to git CLI with a complete ecosystem including VSCode/Cursor extension, high-performance CLI built with Golang, and a full-stack UI/server using Next.js, Express, MongoDB, and Cloudflare. Provides enhanced version control workflows with seamless IDE integration and web-based management.",
+    id: "hit",
+    githubLink: "https://github.com/Airbornharsh/HIT",
+    type: "Developer Tool",
+    isWebsite: true,
+    webLink: "https://hit.harshkeshri.com",
+    technologies: [
+      { name: "Go" },
+      { name: "Next.js" },
+      { name: "TypeScript" },
+      { name: "Express" },
+      { name: "MongoDB" },
+      { name: "Cloudflare" },
+      { name: "VSCode Extension" },
+    ],
+  },
+  {
     name: "A2Rok (Tunneling Service)",
     description:
       "A self-hosted tunneling platform that creates secure tunnels to expose local development servers to the internet. Features multiple protocol support for HTTP/HTTPS/WS/WSS connections, providing an alternative to ngrok with real-time monitoring dashboard and WebSocket connections for seamless development workflow.",
